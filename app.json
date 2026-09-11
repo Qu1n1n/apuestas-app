@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "Apuestas entre Amigos",
+    "slug": "apuestas-entre-amigos",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#111827"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.tuempresa.apuestasentreamigos",
+      "infoPlist": {
+        "NSContactsUsageDescription": "Necesitamos acceso a tus contactos para que puedas invitar a tus amigos a las salas de apuestas.",
+        "NSCameraUsageDescription": "Necesitamos la cámara para que puedas subir una foto como prueba de que has cumplido (o no) una apuesta."
+      }
+    },
+    "android": {
+      "package": "com.tuempresa.apuestasentreamigos",
+      "permissions": [
+        "READ_CONTACTS",
+        "CAMERA"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Necesitamos acceso a tus contactos para invitar amigos a tus salas."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Necesitamos la cámara para subir fotos de prueba de tus apuestas."
+        }
+      ]
+    ]
+  }
+}
