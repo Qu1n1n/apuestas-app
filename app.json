@@ -1,26 +1,26 @@
 {
   "expo": {
-    "name": "Apuestas entre Amigos",
+    "name": "Pike",
     "slug": "apuestas-entre-amigos",
     "version": "0.1.0",
     "orientation": "portrait",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "automatic",
-    "splash": {
-      "backgroundColor": "#111827"
-    },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.tuempresa.apuestasentreamigos",
+      "bundleIdentifier": "com.qu1n1n.apuestas",
       "infoPlist": {
         "NSContactsUsageDescription": "Necesitamos acceso a tus contactos para que puedas invitar a tus amigos a las salas de apuestas.",
-        "NSCameraUsageDescription": "Necesitamos la cámara para que puedas subir una foto como prueba de que has cumplido (o no) una apuesta."
+        "NSCameraUsageDescription": "Necesitamos la cámara para que puedas subir una foto como prueba de que has cumplido (o no) una apuesta.",
+        "NSPhotoLibraryUsageDescription": "Pike necesita acceder a tus fotos para que puedas subir una foto como prueba de una apuesta.",
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
-      "package": "com.tuempresa.apuestasentreamigos",
+      "package": "com.qu1n1n.apuestas",
       "permissions": [
-        "READ_CONTACTS",
-        "CAMERA"
+        "android.permission.READ_CONTACTS",
+        "android.permission.CAMERA"
       ]
     },
     "plugins": [
@@ -35,7 +35,22 @@
         {
           "cameraPermission": "Necesitamos la cámara para subir fotos de prueba de tus apuestas."
         }
-      ]
-    ]
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Pike necesita acceder a tus fotos para que puedas subir una foto como prueba de una apuesta.",
+          "cameraPermission": "Necesitamos la cámara para subir fotos de prueba de tus apuestas."
+        }
+      ],
+      ["expo-splash-screen", { "backgroundColor": "#111827" }],
+      "expo-notifications"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f0695b6a-c55f-44a9-8732-1f47318b9ccd"
+      }
+    },
+    "owner": "x1m0"
   }
 }
